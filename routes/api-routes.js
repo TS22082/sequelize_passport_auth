@@ -8,6 +8,7 @@ router.get("/api", (req, res) => {
 });
 
 router.post("/api/login", passport.authenticate("local"), (req, res) => {
+  console.log("I was hit");
   res.json({ email: req.user.email, id: req.user.id });
 });
 
